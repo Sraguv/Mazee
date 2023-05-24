@@ -136,7 +136,9 @@ while run:
         if sprite.collide_rect(player, final):
             finish = True
             window.blit(win, (0, 0))
+        if sprite.spritecollide(player, monsters, False):
+            finish = True
+            window.blit(loose, (0, 0))
 
     time.delay(50)
     display.update()
-
